@@ -1,0 +1,42 @@
+{
+    "editor.tabSize": 4,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit",
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": ["document"],
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": ["document"],
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.words": [
+        "groq",
+        "Heiquiel"
+    ],
+}
