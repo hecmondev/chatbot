@@ -24,6 +24,7 @@ import type {
   ConversationHeaderActionsOwnerState,
 } from '@mui/x-chat/headless';
 import React from 'react';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const GradientHeader = styled('header')(({ theme }) => ({
   background: `linear-gradient(135deg, ${theme.palette.primary.dark}, ${theme.palette.primary.main})`,
@@ -82,6 +83,7 @@ const customAdapter: ChatAdapter = {
       signal,
     });
     const reader = response.body!.getReader();
+    console.log('body:', response.body);
     const decoder = new TextDecoder();
     let buffer = '';
 
@@ -95,6 +97,8 @@ const customAdapter: ChatAdapter = {
           return;
         }
         buffer += decoder.decode(value, { stream: true });
+
+        console.log('buffer content ->', buffer);
 
         const lines = buffer
           .split('\\n')
