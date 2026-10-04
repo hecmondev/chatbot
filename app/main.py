@@ -1,4 +1,4 @@
-from app.llm import test_llm
+from app.llm import test_local_llm
 from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -38,7 +38,7 @@ def process_message(message: Message) -> JSONResponse:
     #     status_code=status.HTTP_200_OK,
     #     content="**Hola!**\n\nIt's nice to meet you. Is there something I can help you with or would you like to chat for a bit? I'm here to assist you in any way I can. ¿En qué puedo ayudarte? (How can I help you?)",
     # )
-    return JSONResponse(status_code=status.HTTP_200_OK, content=test_llm(message.text))
+    return JSONResponse(status_code=status.HTTP_200_OK, content=test_local_llm(message.text))
 
 
 app.frontend(path='/', directory='web/dist')
